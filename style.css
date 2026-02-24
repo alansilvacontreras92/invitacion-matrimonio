@@ -1,0 +1,40 @@
+/* General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #f9f6f2; /* Color crema elegante */
+}
+
+.nombres {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #8d7052;
+}
+
+/* Adaptación para Escritorio (Desktop) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        background: white;
+    }
+}
+
+/* Adaptación para Móvil */
+@media (max-width: 767px) {
+    .nombres { font-size: 2.5rem; }
+    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #8d7052;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
