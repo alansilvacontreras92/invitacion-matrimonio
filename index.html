@@ -3,39 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda - Invitación</title>
+    <title>Alan & Vico - ¡Nos Casamos!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <audio id="musica" loop>
-        <source src="tu-cancion.mp3" type="audio/mpeg">
-    </audio>
+    <section class="hero" data-aos="fade-up">
+        <h1 class="nombres">Alan & Vico</h1>
+        <p class="intro-text">¡Nos casamos y queremos celebrarlo contigo!</p>
+        <div class="divider">✦</div>
+    </section>
 
-    <div class="container">
-        <header class="hero">
-            <h1 class="nombres">Alan y Vico</h1>
-            <p class="fecha">24 de Julio, 2026</p>
-        </header>
+    <section class="seccion-contador" data-aos="zoom-in">
+        <h3>Faltan:</h3>
+        <div id="countdown">
+            <div class="time-box"><span id="days">00</span><p>Días</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Hs</p></div>
+            <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+        </div>
+    </section>
 
-        <section class="cuenta-regresiva">
-            <div id="timer">
-                <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m
-            </div>
-        </section>
+    <section class="seccion" data-aos="fade-right">
+        <div class="icon">💍</div>
+        <h2>Ceremonia Religiosa</h2>
+        <p>A las 18:00 hrs</p>
+        <p>San Carlos Borromeo, La Cañada 7001 La Reina</p>
+        <a href="https://maps.app.goo.gl/fXRza7BHJSmezhsz8" class="btn-mapa">Ver en Google Maps</a>
+    </section>
 
-        <section class="detalles">
-            <h2>Ceremonia</h2>
-            <p>📍 La ceremonia la realizaremos en la parroquia San Carlos Borromeo, La Cañada 7001, La Reina</p>
-            <a href="https://maps.app.goo.gl/fXRza7BHJSmezhsz8" class="btn">Ver Mapa</a>
-        </section>
+    <section class="seccion" data-aos="fade-left">
+        <div class="icon">🥂</div>
+        <h2>Celebración</h2>
+        <p>Después de la ceremonia nos vamos a festejar a:</p>
+        <p>Centro de Eventos El Castillo</p>
+        <a href="#" class="btn-mapa">Cómo llegar</a>
+    </section>
 
-        <section class="confirmacion">
-            <button onclick="confirmar()" class="btn-confirmar">Confirmar Asistencia</button>
-        </section>
-    </div>
+    <section class="seccion" data-aos="fade-up">
+        <div class="icon">👔</div>
+        <h2>Dress Code</h2>
+        <p><strong>Formal / Elegante</strong></p>
+        <p>Tu mejor sonrisa es el accesorio principal.</p>
+    </section>
 
+    <section class="seccion" data-aos="zoom-in">
+        <div class="icon">🎶</div>
+        <h2>¿Qué música no puede faltar?</h2>
+        <p>¡Ayúdanos a armar la fiesta!</p>
+        <a href="LINK_DE_TU_PLAYLIST" target="_blank" class="btn-spotify">Agregar canción a Spotify</a>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true }); // Inicializa animaciones
+    </script>
 </body>
 </html>
