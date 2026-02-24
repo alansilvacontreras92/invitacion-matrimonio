@@ -1,51 +1,63 @@
-/* General */
+/* Configuración General */
 body {
-    background-color: #fdfaf6; /* Un color crema suave */
-    color: #5d4037; /* Un café oscuro elegante en vez de negro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    max-width: 400px;
-    width: 90%;
+    background-color: #fdfaf6;
+    color: #5d4037;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita que la pantalla se mueva de lado */
 }
 
 .nombres {
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
     color: #8d7052;
 }
 
-/* Adaptación para Escritorio (Desktop) */
-@media (min-width: 768px) {
-    .container {
-        max-width: 900px;
-        margin: 50px auto;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        border-radius: 15px;
-        background: white;
-    }
+.seccion, .hero, .seccion-contador {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Adaptación para Móvil */
-@media (max-width: 767px) {
-    .nombres { font-size: 2.5rem; }
-    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+/* Contador Profesional */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.btn {
+.time-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-width: 70px;
+}
+
+.time-box span {
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+}
+
+.time-box p { font-size: 0.8rem; margin: 0; text-transform: uppercase; }
+
+/* Botones */
+.btn-mapa, .btn-spotify {
     display: inline-block;
-    padding: 10px 20px;
+    margin-top: 15px;
+    padding: 12px 25px;
     background: #8d7052;
     color: white;
     text-decoration: none;
-    border-radius: 20px;
-    margin-top: 10px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
+
+.btn-spotify { background: #1DB954; } /* Color Spotify */
+
+.divider { font-size: 2rem; color: #d4af37; margin-top: 20px; }
