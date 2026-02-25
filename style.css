@@ -29,22 +29,25 @@ body {
 }
 
 .nombres {
-    /* Esta es la nueva fuente elegante */
-    font-family: 'Great Vibes', cursive; 
-    
-    /* Tamaño grande para que destaque */
-    font-size: 7rem; 
-    
-    /* Efecto plateado brillante */
+    /* Fuente Bodoni Moda: Clásica, esbelta y elegante */
+    font-family: 'Bodoni Moda', serif !important; 
+    /* El tamaño en Lovio es grande pero no gigante, lo ideal es 4.5rem */
+    font-size: 4.5rem; 
+    /* Separación entre letras: CLAVE para la elegancia de Windflowers */
+    letter-spacing: 15px; 
+    /* Todo en mayúsculas como en el ejemplo */
+    text-transform: uppercase; 
+    /* Peso de la letra (esbeltez) */
+    font-weight: 400;
+    /* Plateado refinado (degradado sutil) */
     background: linear-gradient(to bottom, #cfd0d3 0%, #ffffff 50%, #9da0a4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* Sombra suave para dar profundidad */
-    filter: drop-shadow(2px 2px 5px rgba(255,255,255,0.2));
-    
+    /* Quitamos sombras pesadas para mantener la limpieza */
+    filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.1));
     margin: 0;
-    padding: 10px 0;
+    padding: 30px 0;
+    display: block;
 }
 
 .intro-text {
