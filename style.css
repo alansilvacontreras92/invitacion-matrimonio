@@ -1,14 +1,15 @@
 /* Configuración General */
 /* Paleta de colores: Negro profundo, Dorado suave y Blanco hueso */
 :root {
-    --bg-dark: #111111;
-    --gold: #c5a059;
-    --text-light: #f4f4f4;
+    --bg-dark: #0a0a0a;
+    /* Efecto Plateado Brillante */
+    --silver: linear-gradient(145deg, #e0e0e0 0%, #ffffff 45%, #b0b0b0 100%);
+    --silver-solid: #e0e0e0; 
 }
 
 body {
-    background-color: #111111; /* Fondo negro */
-    color: #f4f4f4;            /* Texto blanco hueso */
+    background-color: var(--bg-dark); /* Fondo negro */
+    color: #ffffff;            /* Texto blanco hueso */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-align: center;
@@ -28,11 +29,14 @@ body {
 }
 
 .nombres {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
-    color: var(--gold);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Pinyon Script', cursive;
+    font-size: 6rem; /* Aumentamos el tamaño significativamente */
+    background: var(--silver); /* Aplicamos el degradado */
+    -webkit-background-clip: text; /* Truco para que el color esté solo en la letra */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255,255,255,0.2);
     margin: 0;
+    padding: 20px 0;
 }
 
 .seccion {
@@ -43,20 +47,28 @@ body {
 }
 
 h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    color: var(--gold);
-    margin-bottom: 20px;
+    font-family: 'Cinzel', serif; /* Fuente romana muy elegante */
+    font-size: 2.5rem;
+    color: var(--silver-solid);
+    letter-spacing: 4px; /* Espaciado entre letras pro */
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 /* Tarjetas de información */
 .card {
-    background: rgba(255, 255, 255, 0.05);     /* Tarjeta semi-transparente */
-    border: 1px solid #c5a059;                 /* Borde dorado */
-    color: #f4f4f4;                            /* Texto dentro de la tarjeta */
-    padding: 30px;
-    border-radius: 5px;                         /* Bordes menos redondeados para verse más formal */
-    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.03);              /* Tarjeta semi-transparente */
+    border: 1px solid rgba(224, 224, 224, 0.3);         /* Borde plateado sutil */
+    padding: 40px;
+    border-radius: 2px;                                 /* Bordes rectos son más elegantes en invitaciones de lujo */
+    color: #f0f0f0;
+}
+
+/* TEXTO DE LAS SECCIONES */
+p {
+    font-size: 1.2rem;     /* Aumentamos el tamaño de lectura */
+    line-height: 1.8;
+    font-weight: 300;
 }
 
 /* Contador estilo Black Shine */
@@ -80,22 +92,25 @@ h2 {
     font-weight: 300;
 }
 
-/* Botones Dorados */
+/* BOTONES PLATEADOS */
 .btn-mapa, .btn-spotify, .btn-confirmar {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 40px;
-    border: 1px solid var(--gold);
+    font-family: 'Cinzel', serif;
+    border: 1px solid var(--silver-solid);
     background: transparent;
-    color: var(--gold);
+    color: var(--silver-solid);
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
-    transition: all 0.4s;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .btn-mapa:hover, .btn-confirmar:hover {
-    background: var(--gold);
+    background: var(--silver);
     color: black;
+    font-weight: bold;
 }
