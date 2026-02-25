@@ -18,10 +18,21 @@ body {
 
 /* Estilos para el Marco de Canva */
 .hero {
-    position: relative; /* */
-    overflow: hidden; /* Evita que el marco genere scroll innecesario */
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Mantenemos tu fondo oscuro original */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--silver-dark);
 }
 
+/* Aplicación del marco.png */
 .hero::before {
     content: "";
     position: absolute;
@@ -29,34 +40,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('marco.png'); /* Asegúrate que el nombre coincida */
+    /* Ruta del archivo cargado en tu repositorio */
+    background-image: url('marco.png'); 
     background-size: cover;
     background-position: center;
-    z-index: 2; /* Se coloca sobre el fondo pero bajo el texto */
-    pointer-events: none; /* Permite que el usuario pueda hacer click en los botones si los hubiera */
+    background-repeat: no-repeat;
+    z-index: 1; /* Por debajo del texto */
+    pointer-events: none; /* No interfiere con clics */
 }
 
-/* Aseguramos que el contenido (nombres) quede por encima del marco */
-.hero > * {
+/* Aseguramos que los nombres estén sobre el marco */
+.nombres, .intro-text, .divider {
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
-
-/*
-.hero {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
-    background-size: cover;
-    background-position: center;
-    border-bottom: 2px solid var(--silver-dark);
-}
-*/
 
 .nombres {
     /* Fuente Bodoni Moda: Clásica, esbelta y elegante */
