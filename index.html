@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan & Vico - ¡Nos Casamos!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
     
 <body>
-
     <div id="player-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
-        <button id="play-button" style="background: #c5a059; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <button id="play-button" style="background: #e0e0e0; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(255,255,255,0.1);">
             🎵
         </button>
     </div>
@@ -27,7 +26,7 @@
     </section>
 
     <section class="seccion-contador" data-aos="zoom-in">
-        <h3>Faltan:</h3>
+        <h3 style="font-family: 'Cinzel'; color: #e0e0e0; letter-spacing: 3px;">Faltan:</h3>
         <div id="countdown">
             <div class="time-box"><span id="days">00</span><p>Días</p></div>
             <div class="time-box"><span id="hours">00</span><p>Hs</p></div>
@@ -70,17 +69,14 @@
             <div class="icon">🎶</div>
             <h2>¿Qué música no puede faltar?</h2>
             <p>¡Ayúdanos a armar la fiesta!</p>
-            <a href="https://open.spotify.com/playlist/1TqwFoPGMsnnJ6c5UDmIpK?si=57feb7f3ed4847d3&pt=bb90b2454077a0f8f6bb7dcff50bb077" target="_blank" class="btn-spotify">Agregar canción a Spotify</a>
+            <a href="https://open.spotify.com/playlist/1TqwFoPGMsnnJ6c5UDmIpK?si=57feb7f3ed4847d3&pt=bb90b2454077a0f8f6bb7dcff50bb077" target="_blank" class="btn-spotify">Agregar a Spotify</a>
         </div>
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script>
-        // Inicializar Animaciones
         AOS.init({ duration: 1000, once: true });
-
-        // Lógica del Reproductor
         const btn = document.getElementById('play-button');
         const audio = document.getElementById('background-audio');
         btn.addEventListener('click', () => {
@@ -92,9 +88,6 @@
                 btn.innerHTML = "🎵";
             }
         });
-    </script>
-</body>
-</html>
     </script>
 </body>
 </html>
