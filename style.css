@@ -27,7 +27,7 @@ body {
     
     /* CAPAS DE FONDO ORDENADAS */
     background-image: 
-        url('marco.png'), 
+        url('marco1.png'), 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
         url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
     
