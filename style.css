@@ -113,15 +113,41 @@ body {
     padding: 20px;
 }
 
-/* Fecha Estilo Windflowers (Sutil y esbelta) */
+/* ------ Fecha portada ------ */
 .fecha-top {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--plata-solido);
+    font-family: 'Cinzel', serif; /* Cambiamos a Cinzel para un toque más clásico */
+    color: var(--silver-light);
     letter-spacing: 5px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: inline-block; /* Importante para que las líneas midan lo mismo que el texto */
+    padding: 15px 0;
+    position: relative;
     margin-bottom: 40px;
-    font-weight: 300;
 }
+
+/* Línea superior */
+.fecha-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%; /* La línea es un poco más corta que el texto para mayor elegancia */
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--silver-dark), transparent);
+}
+
+/* Línea inferior */
+.fecha-top::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--silver-dark), transparent);
+}
+/* ------ Fecha portada ------ */
 
 /* Aseguramos que el texto esté siempre arriba de todo */
 .nombres, .intro-text, .divider {
