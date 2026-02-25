@@ -1,63 +1,100 @@
 /* Configuración General */
+/* Paleta de colores: Negro profundo, Dorado suave y Blanco hueso */
+:root {
+    --bg-dark: #111111;
+    --gold: #c5a059;
+    --text-light: #f4f4f4;
+}
+
 body {
-    background-color: #fdfaf6;
-    color: #5d4037;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita que la pantalla se mueva de lado */
+    text-align: center;
+}
+
+/* Fondo con imagen opaca (como el original) */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070'); /* Puedes cambiar esta URL por una foto de ustedes */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid var(--gold);
 }
 
 .nombres {
     font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
-    margin-bottom: 10px;
-    color: #8d7052;
+    font-size: 5rem;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
 }
 
-.seccion, .hero, .seccion-contador {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 600px;
+.seccion {
+    padding: 80px 20px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    max-width: 800px;
     margin: 0 auto;
 }
 
-/* Contador Profesional */
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de información */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--gold);
+    padding: 30px;
+    border-radius: 5px; /* Bordes menos redondeados para verse más formal */
+    margin: 20px 0;
+}
+
+/* Contador estilo Black Shine */
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .time-box {
-    background: #fff;
+    border: 1px solid var(--gold);
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    min-width: 70px;
+    min-width: 80px;
+    background: transparent;
 }
 
 .time-box span {
-    font-size: 2rem;
-    font-weight: 600;
-    display: block;
+    font-size: 2.5rem;
+    color: var(--gold);
+    font-weight: 300;
 }
 
-.time-box p { font-size: 0.8rem; margin: 0; text-transform: uppercase; }
-
-/* Botones */
-.btn-mapa, .btn-spotify {
+/* Botones Dorados */
+.btn-mapa, .btn-spotify, .btn-confirmar {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #8d7052;
-    color: white;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    transition: all 0.4s;
+    font-size: 0.8rem;
 }
 
-.btn-spotify { background: #1DB954; } /* Color Spotify */
-
-.divider { font-size: 2rem; color: #d4af37; margin-top: 20px; }
+.btn-mapa:hover, .btn-confirmar:hover {
+    background: var(--gold);
+    color: black;
+}
