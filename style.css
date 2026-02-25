@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-/* Estilos para el Marco de Canva */
+/* 1. Base del Hero (Fondo y Texto) */
 .hero {
     position: relative;
     overflow: hidden;
@@ -24,24 +24,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Fondo de imagen fijo */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
     background-size: cover;
     background-position: center;
-    border-bottom: 2px solid var(--silver-dark);
 }
 
-/* El Marco como capa superior inteligente */
-.hero::after {
+/* 2. El Marco de Canva como "Borde" */
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /* Usamos tu imagen de Canva */
     background-image: url('marco1.png');
-    /* 'contain' asegura que las flores SIEMPRE se vean dentro de la pantalla */
+    /* 'contain' es vital: obliga a que la imagen quepa sin deformarse */
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
@@ -49,6 +48,36 @@ body {
     pointer-events: none;
 }
 
+/* 3. Ajuste para que en PC no se vean "todas juntas" en el centro */
+@media (min-width: 1024px) {
+    .hero::before {
+        /* En pantallas grandes (Desktop), usamos 'cover' para que las flores 
+           se vayan a las esquinas extremas del monitor */
+        background-size: cover;
+    }
+}
+
+/* 4. Ajuste para Móvil (Vertical) */
+@media (max-width: 768px) {
+    .hero::before {
+        /* En móviles, 'contain' evita que las flores se amontonen 
+           y mantiene la proporción que diseñaste en Canva */
+        background-size: contain;
+        background-position: top center; /* Prioriza que las flores de arriba se vean bien */
+        height: 100%;
+    }
+    
+    .nombres {
+        font-size: 2.5rem; /* Achicamos el nombre para que el marco respire */
+        letter-spacing: 8px;
+    }
+}
+
+/* Aseguramos que el texto esté siempre arriba de todo */
+.nombres, .intro-text, .divider {
+    position: relative;
+    z-index: 2;
+}
 .nombres, .intro-text, .divider {
     position: relative;
     z-index: 2; /* Texto siempre sobre el marco */
@@ -162,14 +191,4 @@ h2 {
     color: var(--silver-dark);
     font-size: 1.5rem;
     margin-top: 20px;
-}
-
-@media (max-width: 600px) {
-    .hero::after {
-        /* En móviles, estiramos un poco más el marco para que las flores luzcan mejor */
-        background-size: 100% 100%;
-    }
-    .nombres {
-        font-size: 3rem; /* Achicamos un poco el nombre para que no choque con las flores */
-    }
 }
