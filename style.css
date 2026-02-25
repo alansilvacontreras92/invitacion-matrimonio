@@ -32,7 +32,7 @@ body {
         url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
     
     /* Forzamos a que ambas imágenes ocupen el 100% del alto y ancho */
-    background-size: 100% 100%, cover, 100% 100%;
+    /*background-size: 100% 100%, cover, 100% 100%;*/
     
     background-position: center;
     background-repeat: no-repeat;
