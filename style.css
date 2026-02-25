@@ -24,27 +24,34 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    /* CAPAS DE FONDO */
-    background-image: 
-        url('marco1.png'), 
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
-    
-    /* Al usar 'cover' en ambas, el navegador las escala proporcionalmente 
-       basándose en que ahora tienen la misma relación de aspecto (3:2) */
-    background-size: cover, cover, cover;
-    
+    /* Fondo de imagen fijo */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     border-bottom: 2px solid var(--silver-dark);
 }
 
+/* El Marco como capa superior inteligente */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('marco.png');
+    /* 'contain' asegura que las flores SIEMPRE se vean dentro de la pantalla */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    pointer-events: none;
+}
 
-/* Aseguramos que los nombres estén sobre el marco */
 .nombres, .intro-text, .divider {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Texto siempre sobre el marco */
 }
 
 .nombres {
