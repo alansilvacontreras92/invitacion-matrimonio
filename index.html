@@ -10,7 +10,16 @@
 </head>
 <body>
 
-    <section class="hero" data-aos="fade-up">
+    <div id="player-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+        <button id="play-button" style="background: #c5a059; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            🎵
+        </button>
+    </div>
+    <audio id="background-audio" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero" data-aos="fade-in">
         <h1 class="nombres">Alan & Vico</h1>
         <p class="intro-text">¡Nos casamos y queremos celebrarlo contigo!</p>
         <div class="divider">✦</div>
@@ -25,40 +34,66 @@
         </div>
     </section>
 
-    <section class="seccion" data-aos="fade-right">
-        <div class="icon">💍</div>
-        <h2>Ceremonia Religiosa</h2>
-        <p>A las 18:00 hrs</p>
-        <p>San Carlos Borromeo, La Cañada 7001 La Reina</p>
-        <a href="https://maps.app.goo.gl/fXRza7BHJSmezhsz8" class="btn-mapa">Ver en Google Maps</a>
-    </section>
-
-    <section class="seccion" data-aos="fade-left">
-        <div class="icon">🥂</div>
-        <h2>Celebración</h2>
-        <p>Después de la ceremonia nos vamos a festejar a:</p>
-        <p>Centro de Eventos El Castillo</p>
-        <a href="#" class="btn-mapa">Cómo llegar</a>
+    <section class="seccion" data-aos="fade-up">
+        <div class="card">
+            <div class="icon">💍</div>
+            <h2>Ceremonia Religiosa</h2>
+            <p>Viernes, 24 de Julio del 2026</p>
+            <p>18:00 Horas</p>
+            <p>San Carlos Borromeo, La Cañada 7001 La Reina</p>
+            <a href="https://maps.app.goo.gl/fXRza7BHJSmezhsz8" target="_blank" class="btn-mapa">Ver ubicación</a>
+        </div>
     </section>
 
     <section class="seccion" data-aos="fade-up">
-        <div class="icon">👔</div>
-        <h2>Dress Code</h2>
-        <p><strong>Formal / Elegante</strong></p>
-        <p>Tu mejor sonrisa es el accesorio principal.</p>
+        <div class="card">
+            <div class="icon">🥂</div>
+            <h2>Celebración</h2>
+            <p>Después de la ceremonia nos vamos a festejar a:</p>
+            <p><strong>Casona de La Laguna, Avenida Chicureo 13000</strong></p>
+            <a href="https://maps.app.goo.gl/ykiJm1qzPDH8yTsx8" target="_blank" class="btn-mapa">Cómo llegar</a>
+        </div>
+    </section>
+
+    <section class="seccion" data-aos="fade-up">
+        <div class="card">
+            <div class="icon">👔</div>
+            <h2>Dress Code</h2>
+            <p><strong>Formal / Elegante</strong></p>
+            <p>Tu mejor sonrisa es el accesorio principal.</p>
+        </div>
     </section>
 
     <section class="seccion" data-aos="zoom-in">
-        <div class="icon">🎶🎵🎶🎵🎶</div>
-        <h2>¿Qué música no puede faltar?</h2>
-        <p>¡Ayúdanos a armar la fiesta!</p>
-        <a href="https://open.spotify.com/playlist/1TqwFoPGMsnnJ6c5UDmIpK?si=57feb7f3ed4847d3&pt=bb90b2454077a0f8f6bb7dcff50bb077" target="_blank" class="btn-spotify">Agregar canción a Spotify</a>
+        <div class="card">
+            <div class="icon">🎶</div>
+            <h2>¿Qué música no puede faltar?</h2>
+            <p>¡Ayúdanos a armar la fiesta!</p>
+            <a href="https://open.spotify.com/playlist/1TqwFoPGMsnnJ6c5UDmIpK?si=57feb7f3ed4847d3&pt=bb90b2454077a0f8f6bb7dcff50bb077" target="_blank" class="btn-spotify">Agregar canción a Spotify</a>
+        </div>
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true }); // Inicializa animaciones
+        // Inicializar Animaciones
+        AOS.init({ duration: 1000, once: true });
+
+        // Lógica del Reproductor
+        const btn = document.getElementById('play-button');
+        const audio = document.getElementById('background-audio');
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "⏸️";
+            } else {
+                audio.pause();
+                btn.innerHTML = "🎵";
+            }
+        });
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>
