@@ -92,42 +92,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* MODIFICACION MARCO FLOREADO */
-.flor-esquina {
-    position: absolute;
-    width: 250px; 
-    height: 250px;
-    background-image: url('flores1.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10;
-    pointer-events: none;
-    opacity: 0.7;
-    /* Este filtro las vuelve plateadas/blancas para el estilo Black & Silver */
-    filter: brightness(0) invert(1) opacity(0.5); 
-}
-
-.superior-izquierda {
-    top: -30px;
-    left: -30px;
-    transform: rotate(-15deg);
-}
-
-.superior-derecha {
-    top: -30px;
-    right: -30px;
-    transform: rotate(75deg) scaleX(-1);
-}
-
-/* Ajuste para que las flores no tapen el texto en celulares */
-@media (max-width: 768px) {
-    .flor-esquina {
-        width: 150px;
-        height: 150px;
-    }
-}
-/* --------------------------------------------------------- */
-
 .card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
