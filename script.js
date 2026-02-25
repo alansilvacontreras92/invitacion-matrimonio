@@ -1,5 +1,5 @@
 // Cuenta regresiva
-const weddingDate = new Date("Oct 25, 2025 18:00:00").getTime();
+const weddingDate = new Date("Jul 24, 2026 18:00:00").getTime();
 
 setInterval(function() {
     const now = new Date().getTime();
