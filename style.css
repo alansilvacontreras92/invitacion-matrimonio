@@ -163,3 +163,13 @@ h2 {
     font-size: 1.5rem;
     margin-top: 20px;
 }
+
+@media (max-width: 600px) {
+    .hero::after {
+        /* En móviles, estiramos un poco más el marco para que las flores luzcan mejor */
+        background-size: 100% 100%;
+    }
+    .nombres {
+        font-size: 3rem; /* Achicamos un poco el nombre para que no choque con las flores */
+    }
+}
