@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: #111111; /* Fondo negro */
+    color: #f4f4f4;            /* Texto blanco hueso */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-align: center;
@@ -51,10 +51,11 @@ h2 {
 
 /* Tarjetas de información */
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--gold);
+    background: rgba(255, 255, 255, 0.05);     /* Tarjeta semi-transparente */
+    border: 1px solid #c5a059;                 /* Borde dorado */
+    color: #f4f4f4;                            /* Texto dentro de la tarjeta */
     padding: 30px;
-    border-radius: 5px; /* Bordes menos redondeados para verse más formal */
+    border-radius: 5px;                         /* Bordes menos redondeados para verse más formal */
     margin: 20px 0;
 }
 
