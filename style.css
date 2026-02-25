@@ -40,7 +40,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('marco.png');
+    background-image: url('marco1.png');
     /* 'contain' asegura que las flores SIEMPRE se vean dentro de la pantalla */
     background-size: contain; 
     background-repeat: no-repeat;
