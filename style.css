@@ -25,14 +25,15 @@ body {
     flex-direction: column;
     justify-content: center;
     
-    /* CAPAS DE FONDO ORDENADAS */
+    /* CAPAS DE FONDO */
     background-image: 
         url('marco1.png'), 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
         url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');
     
-    /* Forzamos a que ambas imágenes ocupen el 100% del alto y ancho */
-    background-size: 100% 100%, cover, 100% 100%;
+    /* Al usar 'cover' en ambas, el navegador las escala proporcionalmente 
+       basándose en que ahora tienen la misma relación de aspecto (3:2) */
+    background-size: cover, cover, cover;
     
     background-position: center;
     background-repeat: no-repeat;
