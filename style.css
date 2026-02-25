@@ -1,11 +1,20 @@
 /* Configuración General */
+
+/*
 :root {
-    --bg-dark: #050505; /* Negro más profundo */
+    --bg-dark: #050505;
     --silver-light: #f8f9fa;
     --silver-main: #e0e0e0;
     --silver-dark: #a8a9ad;
-    /* Degradado de plata real */
+   
     --silver-gradient: linear-gradient(to bottom, #cfd0d3 0%, #ffffff 50%, #9da0a4 100%);
+}
+*/
+
+:root {
+    --fondo: #0a0a0a;
+    --plata: linear-gradient(to bottom, #cfd0d3 0%, #ffffff 50%, #9da0a4 100%);
+    --plata-solido: #e0e0e0;
 }
 
 body {
@@ -14,6 +23,18 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     text-align: center;
+}
+
+.hero-movil {
+    height: 100vh; /* Ocupa exactamente el alto de la pantalla del móvil */
+    background-color: var(--fondo);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-top: 15vh; /* Espacio para las flores */
 }
 
 /* 1. Base del Hero (Fondo y Texto) */
@@ -73,6 +94,35 @@ body {
     }
 }
 
+/* Flores estilo Midnight en la cabecera */
+.flores-cabecera {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35vh;
+    background-image: url('flores1.png'); /* Tu imagen de flores azules */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+
+.contenido-portada {
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Fecha Estilo Windflowers (Sutil y esbelta) */
+.fecha-top {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--plata-solido);
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
 /* Aseguramos que el texto esté siempre arriba de todo */
 .nombres, .intro-text, .divider {
     position: relative;
@@ -103,6 +153,39 @@ body {
     margin: 0;
     padding: 30px 0;
     display: block;
+}
+
+.ampersand {
+    font-family: 'Pinyon Script', cursive; /* Un toque cursivo sutil para el & */
+    font-size: 2.5rem;
+    -webkit-text-fill-color: var(--plata-solido);
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Mensaje Emocional */
+.mensaje-emocion {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 40px auto;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Indicador para bajar */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--plata-solido);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .intro-text {
