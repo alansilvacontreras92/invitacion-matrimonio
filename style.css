@@ -99,7 +99,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-// MODIFICACION MARCO FLOREADO
+/* MODIFICACION MARCO FLOREADO */
 .flor-esquina {
     position: absolute;
     width: 250px; 
@@ -133,7 +133,7 @@ h2 {
         height: 150px;
     }
 }
-// ---------------------------------------------------------
+/* --------------------------------------------------------- */
 
 .card {
     background: rgba(255, 255, 255, 0.02);
