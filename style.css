@@ -29,12 +29,20 @@ body {
 }
 
 .nombres {
-    font-family: 'Great Vibes', cursive;
-    font-size: 7rem; /* Tamaño extra grande para elegancia */
-    background: var(--silver-gradient);
+    /* Esta es la nueva fuente elegante */
+    font-family: 'Great Vibes', cursive; 
+    
+    /* Tamaño grande para que destaque */
+    font-size: 7rem; 
+    
+    /* Efecto plateado brillante */
+    background: linear-gradient(to bottom, #cfd0d3 0%, #ffffff 50%, #9da0a4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    /* Sombra suave para dar profundidad */
     filter: drop-shadow(2px 2px 5px rgba(255,255,255,0.2));
+    
     margin: 0;
     padding: 10px 0;
 }
