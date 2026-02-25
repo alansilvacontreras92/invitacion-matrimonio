@@ -17,6 +17,8 @@ body {
 }
 
 .hero {
+    position: relative;
+    overflow: hidden; /* Para que las flores no causen scroll lateral */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -71,6 +73,41 @@ h2 {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+
+// MODIFICACION MARCO FLOREADO
+.flor-esquina {
+    position: absolute;
+    width: 250px; /* Tamaño de la rama */
+    height: 250px;
+    background-image: url('https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNDU4LWJvdGFuaWNhbC0wNi1hXzEucG5n.png'); /* Rama de eucalipto elegante */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10; /* Para que esté sobre el fondo pero no tape botones */
+    pointer-events: none; /* Para que no interfiera si alguien hace clic cerca */
+    opacity: 0.8; /* Un toque de transparencia para elegancia */
+    filter: grayscale(100%) brightness(1.2); /* Esto hará que las flores se vean más "Plateadas/Rust" y menos verdes */
+}
+
+.superior-izquierda {
+    top: -20px;
+    left: -20px;
+    transform: rotate(0deg);
+}
+
+.superior-derecha {
+    top: -20px;
+    right: -20px;
+    transform: rotate(90deg) scaleX(-1); /* Espejo para que encuadre bien */
+}
+
+/* Ajuste para que las flores no tapen el texto en celulares */
+@media (max-width: 768px) {
+    .flor-esquina {
+        width: 150px;
+        height: 150px;
+    }
+}
+// ---------------------------------------------------------
 
 .card {
     background: rgba(255, 255, 255, 0.02);
