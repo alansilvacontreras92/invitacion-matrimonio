@@ -16,6 +16,33 @@ body {
     text-align: center;
 }
 
+/* Estilos para el Marco de Canva */
+.hero {
+    position: relative; /* */
+    overflow: hidden; /* Evita que el marco genere scroll innecesario */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('marco.png'); /* Asegúrate que el nombre coincida */
+    background-size: cover;
+    background-position: center;
+    z-index: 2; /* Se coloca sobre el fondo pero bajo el texto */
+    pointer-events: none; /* Permite que el usuario pueda hacer click en los botones si los hubiera */
+}
+
+/* Aseguramos que el contenido (nombres) quede por encima del marco */
+.hero > * {
+    position: relative;
+    z-index: 3;
+}
+
+/*
 .hero {
     position: relative;
     overflow: hidden; /* Para que las flores no causen scroll lateral */
@@ -29,6 +56,7 @@ body {
     background-position: center;
     border-bottom: 2px solid var(--silver-dark);
 }
+*/
 
 .nombres {
     /* Fuente Bodoni Moda: Clásica, esbelta y elegante */
