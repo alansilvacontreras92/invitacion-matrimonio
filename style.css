@@ -45,7 +45,7 @@ body {
 /*
 .hero {
     position: relative;
-    overflow: hidden; /* Para que las flores no causen scroll lateral */
+    overflow: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
